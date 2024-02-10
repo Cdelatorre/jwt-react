@@ -22,7 +22,8 @@ export const AuthProvider = ({ children }) => {
       .then((user) => {
         setCurrentUser(user);
         setIsAuthLoaded(true);
-        callback && callback(); // Para cuando necesite redirigir despues de un login
+
+        callback && callback()
       });
   }, []);
 
